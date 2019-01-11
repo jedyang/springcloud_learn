@@ -23,6 +23,7 @@
 	<modules>
 		<module>eureka_client</module>
 		<module>eureka_server</module>
+		<module>eureka_consumer</module>
 	</modules>
 
 	<dependencies>
@@ -52,6 +53,19 @@
 	</dependencyManagement>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.yml</include>
+					<include>**/*.properties</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

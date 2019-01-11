@@ -1,14 +1,17 @@
 server:
-   port: 8762
+   port: 8761
 
-#spring:
-#  profiles: peer2
+spring:
+  profiles: peer2
+  application:
+    name: eureka-server
 
 eureka:
    instance:
 #       hostname: peer2
        prefer-ip-address: true
+       instance-id: peer2
    client:
        serviceUrl:
 #           defaultZone: http://peer1:8761/eureka/,http://peer3:8763/eureka/
-           defaultZone: http://10.135.7.56:8761/eureka/,http://10.135.6.66:8763/eureka/
+           defaultZone: http://x.x.x.x:8761/eureka/,http://z.z.z.z:8761/eureka/
