@@ -16,5 +16,7 @@
 
 	<modules>
 		<module>ribbon</module>
+		<module>feign</module>
 	</modules>
+
 </project>
