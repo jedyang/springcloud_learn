@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * 使用接口
  */
-@FeignClient(name = "ervice-hello")
+@FeignClient(name = "service-hello")
 public interface HelloService {
 
     @GetMapping("/hello/{name}")
-    public String hello(@PathVariable String name);
+    String hello(@PathVariable(value = "name") String name);
 }

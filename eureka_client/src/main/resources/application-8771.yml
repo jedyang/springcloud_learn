@@ -8,3 +8,26 @@ eureka:
             defaultZone: http://localhost:8761/eureka/
 server:
     port: 8771
+
+# version
+version: 1.0.0
+
+# actuator配置信息
+info:
+  key1: 8771
+  key2: service-hello
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' #加载所有的端点，默认只加载了info、health
+        exclude: beans #排除beans
+  endpoint:  #注意没有s
+    health:
+      show-details: always
+    #可以关闭指定的端点
+    shutdown:
+      enabled: true
+    info:
+      cache:
+        time-to-live: 10s
