@@ -1,0 +1,22 @@
+server:
+  port: 8792
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: turbine
+
+turbine:
+  # 要监控的应用，多个用逗号隔开
+  app-config: feign-consumer,ribbon-consumer
+  # 指定聚合哪些集群,多个使用","分割，默认为default
+  aggregator:
+    cluster-config: ribbon,feign
+  # 配合被监控的应用使用。假设想要监控的应用配置了eureka.instance.metadata-map.cluster: ABC，则需要配置，同时turbine.aggregator.clusterConfig: ABC
+  cluster-name-expression: metadata['cluster']
+  # 让同一主机上的服务通过主机名与端口号的组合来进行区分，默认情况下会以host来区分不同的服务，这会使得在本机调试的时候，本机上的不同服务聚合成一个服务来统计。
+  combine-host-port: true

@@ -4,6 +4,17 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+  # 设置cluster的名字，配合turbine使用
+  instance:
+    metadata-map:
+     cluster: ribbon
+
 spring:
   application:
     name: ribbon-consumer
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*,hystrix.stream"

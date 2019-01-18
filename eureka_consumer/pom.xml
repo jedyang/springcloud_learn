@@ -17,6 +17,8 @@
 	<modules>
 		<module>ribbon</module>
 		<module>feign</module>
+		<module>hystrix_dashbord</module>
+		<module>turbine</module>
 	</modules>
 
 </project>

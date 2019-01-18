@@ -4,6 +4,24 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    metadata-map:
+     cluster: feign
+
 spring:
   application:
     name: feign-consumer
+
+# 开启断路器
+feign:
+   hystrix:
+     enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*,hystrix.stream" #加载所有的端点，默认只加载了info、health
+  endpoint:  #注意没有s
+    health:
+      show-details: always

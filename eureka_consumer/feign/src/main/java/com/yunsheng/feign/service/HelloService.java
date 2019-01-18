@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * 使用接口
  */
-@FeignClient(name = "service-hello")
+@FeignClient(name = "service-hello", fallback = DefaultFallback.class)
 public interface HelloService {
 
     @GetMapping("/hello/{name}")
