@@ -23,3 +23,17 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+eureka_consumer/turbine/.mvn/wrapper/maven-wrapper.jar
+eureka_consumer/turbine/.mvn/wrapper/maven-wrapper.jar
+eureka_consumer/turbine/.mvn/wrapper/maven-wrapper.jar
+configserver/.mvn/wrapper/maven-wrapper.jar
+configserver/.mvn/wrapper/maven-wrapper.properties
+configserver/mvnw
+configserver/mvnw.cmd
+configserver/.mvn/wrapper/maven-wrapper.jar
+eureka_consumer/turbine/mvnw
+eureka_consumer/turbine/.mvn/wrapper/maven-wrapper.jar
+eureka_consumer/turbine/.mvn/wrapper/maven-wrapper.properties
+*.jar
+eureka_consumer/turbine/mvnw.cmd
+eureka_consumer/turbine/.mvn/wrapper/maven-wrapper.jar
