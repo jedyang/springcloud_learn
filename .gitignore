@@ -41,3 +41,4 @@ configserver/.mvn/wrapper/maven-wrapper.jar
 zuul/mvnw
 *.jar
 *.cmd
+*.jar
