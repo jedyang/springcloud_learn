@@ -42,3 +42,7 @@ zuul/mvnw
 *.jar
 *.cmd
 *.jar
+kafka/mvnw
+*.jar
+*.jar
+kafka/.mvn/wrapper/maven-wrapper.properties

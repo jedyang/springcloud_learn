@@ -10,3 +10,19 @@ spring:
           uri: https://github.com/jedyang/springcloud_learn
           username:
           password:
+    stream:
+      kafka:
+        binder:
+          brokers: 10.133.42.153:9092
+          zkNodes: 10.133.42.153:2181,10.133.42.154:2181,10.133.42.155:2181
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  security:
+    enabled: false   #是否需要权限拉去，默认是true,如果不false就不允许你去拉取配置中心Server更新的内容
+
+
