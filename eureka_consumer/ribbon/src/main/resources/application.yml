@@ -1,5 +1,4 @@
-server:
-  port: 8781
+# 通用部分配置项
 eureka:
   client:
     service-url:
@@ -12,6 +11,14 @@ eureka:
 spring:
   application:
     name: ribbon-consumer
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers: 10.133.42.153:9092
+  profiles:
+    active: 8781
 
 
 management:
@@ -19,3 +26,15 @@ management:
     web:
       exposure:
         include: "*,hystrix.stream"
+
+---
+server:
+  port: 8781
+spring:
+  profiles: 8781
+
+---
+server:
+  port: 8783
+spring:
+  profiles: 8783
