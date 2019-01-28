@@ -27,7 +27,6 @@
         <module>eureka_consumer</module>
         <module>configserver</module>
         <module>zuul</module>
-        <module>kafka</module>
     </modules>
 
     <dependencyManagement>
